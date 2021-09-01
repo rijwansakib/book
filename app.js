@@ -16,13 +16,12 @@ const displayData=(books)=>{
     searchResult.textContent='';
     searchcompair.textContent='';
  // total search Result 
-    const total=books.docs;
-    const totalBook=total.length;
+    const total=books.numFound;
     const searchTotal=document.getElementById('total');
     searchTotal.textContent='';
     const p=document.createElement('p');
     p.innerHTML=`
-        <h1>Total:${console.log(totalBook),totalBook}</h1>
+        <h1>Total:${total}</h1>
     `;
     searchTotal.appendChild(p);
 //search Compair
