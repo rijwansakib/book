@@ -2,10 +2,9 @@
 const submit=()=>{
     const inputArea=document.getElementById('search-text')
     const searchText=inputArea.value;
-    console.log(searchText);
     inputArea.value='';
 //call api
-const uri=`http://openlibrary.org/search.json?q=${searchText}`;
+const uri=`https://openlibrary.org/search.json?q=${searchText}`;
 fetch(uri)
 .then(res=>res.json())
 .then(data=>displayData(data));
